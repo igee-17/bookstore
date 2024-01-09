@@ -80,10 +80,6 @@ export default App;
 - add and configure daisyui to our project
 - add TailwindCSS Typography plugin
 
-## Solution (2) - Setup DaisyUI
-
-[DaisyUI](https://daisyui.com/)
-
 ```sh
 npm i  -D daisyui@latest @tailwindcss/typography
 ```
