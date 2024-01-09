@@ -12,7 +12,7 @@ const FormInput = ({ label, name, type, defaultValue, size, placeholder }) => {
       <input
         type={type}
         name={name}
-        defaultValue={defaultValue}
+        // defaultValue={defaultValue}
         className={`input input-bordered ${size}`}
         placeholder={placeholder || ""}
         onChange={(e) => dispatch(setSearch(e.target.value))}
