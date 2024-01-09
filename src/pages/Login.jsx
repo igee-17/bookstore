@@ -67,13 +67,13 @@ const Login = () => {
         <div className="mt-4">
           <SubmitBtn text="Login" />
         </div>
-        <button
+        {/* <button
           type="button"
           className="btn btn-secondary btn-block"
           onClick={loginAsGuestUser}
         >
           Guest user
-        </button>
+        </button> */}
         <p className="text-center">
           Not a member yet?{" "}
           <Link
