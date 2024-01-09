@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { setBooks } from "../features/books/bookSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-const ProductsGrid = () => {
+const ProductsGrid = ({ filtered }) => {
   const { products } = useLoaderData();
 
   const { books } = useSelector((store) => store.bookSlice);
@@ -12,7 +12,10 @@ const ProductsGrid = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setBooks(products));
+    if (filtered) {
+      const filteredProducts = products.slice(0, 5);
+      dispatch(setBooks(filteredProducts));
+    } else dispatch(setBooks(products));
   }, [products]);
 
   return (
